@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #121214;
+    --yellow: #DDA74C;
+    --yellow-100: #F7DD43;
+    --black: #1B1B1B;
+    --black-opacity: #1B1B1B;
+    --gray: #323238;
+    --white: #FEFEFE;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg);
+    background-image: url(../img/vila-belmiro.jpg);
+    /* Foto de <a href="https://unsplash.com/pt-br/@gabrieluizramos?utm_
+    content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gabriel Ramos</a> */
+    background-size: cover;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+#app {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+
+header {
+    padding: 23px;
+    background-color: var(--black);
+    border-bottom: 1px solid var(--yellow);
+    margin-bottom: 72px;
+}
+
+header .texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--yellow-100);
+    margin-left: 12px;
+}
+
+.link-quiz a {
+    color: var(--white);
+    text-decoration: none;
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    font-size: 18px;
+    border: 1px solid var(--yellow);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.link-quiz a:hover {
+    background-color: var(--yellow-100);
+    color: var(--gray);
+    border: 1px solid var(--white);
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 42px 23px;
+    text-align: center;
+    background: var(--black);
+    border-bottom: 1px solid var(--yellow);
+    border-radius: 6px;
+    width: 256px;
+    margin: 0 auto;
+}
+
+.card h2 {
+    color: var(--yellow-100);
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 53px;
+}
+
+.card h2 span {
+    color: var(--white);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* width: 210px; */
+}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card ul li+li {
+    padding-top: 24px;
+    border-top: 1px solid var(--gray);
+}
+
+.card ul li strong {
+    font-size: 900;
+    font-size: 26px;
+    line-height: 85%;
+    color: var(--white);
+}
+
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+    transform: scale(1.1);
+}
+
+.card h2,
+.card ul li strong,
+.card ul li img {
+    transition: transform 0.5s;
+}
+
+.card ul li img {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--gray);
+}
+
+img {
+    box-sizing: border-box;
+    width: 3.5rem;
+    height: 3.5rem;
+    /* background-color: var(--white); */
+    /* border: 1px solid var(--white); */
+}
+
+/* .card ul li img {
+    animation: appear .5s;
+}
+
+.card:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 3s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+@media (min-width: 700px) {
+    #cards {
+        max-width: 600px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .link-quiz a {
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+}
